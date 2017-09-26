@@ -13,7 +13,7 @@
 		<div class="panel-heading">
 			<strong>Cadastro de clientes</strong>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body"> <!-- th:object diz o nome do objeto do qual o CLienteController retira/inclui as informacoes  -->
 			<form class="form-horizontal" th:object="${cliente}" th:action="@{/save}" method="post" style="margin: 10px">
 				<div class="form-group">
  					<fieldset>

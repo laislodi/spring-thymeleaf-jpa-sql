@@ -23,7 +23,7 @@ public class ClienteController {
 	@GetMapping("/")
 	public ModelAndView findAll() {
 		
-		ModelAndView mv = new ModelAndView("/cliente");
+		ModelAndView mv = new ModelAndView("/cliente"); // usa o cliente.html
 		mv.addObject("clientes", service.findAll());
 		
 		return mv;
@@ -33,7 +33,8 @@ public class ClienteController {
 	@GetMapping("/add")
 	public ModelAndView add(Cliente cliente) {
 		
-		ModelAndView mv = new ModelAndView("/clienteAdd");
+		ModelAndView mv = new ModelAndView("/clienteAdd"); // usa o clienteAdd.html
+		// nome do objeto (nomeado em clienteAdd.html) entre aspas
 		mv.addObject("cliente", cliente);
 		
 		return mv;
